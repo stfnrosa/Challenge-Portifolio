@@ -1,12 +1,12 @@
-/*CSS Reset / Normalize*/
-/*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
-coloque nas sessões indicadas*/
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
 
 :root{
     /*Insira a variavel das outras cores inspecionando o modelo do figma*/
     /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
+    
    --cor-de-fundo: #F5F5F5;
-   --cor-de-link: #000;
+   --cor-de-link: #f1f2f6;
+    --font: 'Montserrat', sans-serif;
 }
 
 body {
@@ -17,13 +17,39 @@ body {
     padding: 0;
     line-height: 1;
 }
+
+.cabecalho{
+    background: rgb(212,128,221);
+    background: linear-gradient(133deg, rgb(146, 1, 162) 20%, rgb(65, 0, 186) 40%, rgb(0, 52, 197) 60%, rgb(24, 0, 146) 80%, #08005c 100%);
+    padding: 2rem;
+    width: 100%; 
+    position: fixed;
+    top: 0;
+    
+     
+  }
+.cabecalho__menu{    
+    display: flex;
+    justify-content: center;
+    gap: 5%;          
+}
+
+.cabecalho__menu__link{
+    text-decoration: none;
+    color:var(--cor-de-link);
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: var(--fonte);
+}
+
+.cabecalho__menu__link:hover{
+    color: #c3c3c3;
+}
+
 ol, ul,li {
     list-style: none;
 }
-a{
-    text-decoration: none;
-    color: var(--cor-de-link);
-}
+
 
 /*Neste desafio, gostariamos que praticassem a metodologia BEM, caso seintam a vontade 
 de utiliza-la. 
