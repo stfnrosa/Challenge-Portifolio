@@ -1,30 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
 
 :root{
-    /*Insira a variavel das outras cores inspecionando o modelo do figma*/
-    /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
     
     --cor-de-fundo: #F5F5F5;
     --cor-de-link: #000;
+    --cor-secundaria:  #464646;
     --font: 'Montserrat', sans-serif;
+    --tamanho-de-margem: 32px;
 }
 
-body {
-    box-sizing: border-box;
-    background-color: var(--cor-de-fundo) ;
-    font-family: 'Raleway';
+*{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body { 
+    background-color: var(--cor-de-fundo);
+    font-family: 'Raleway';
     line-height: 1;
 }
 
+
+.all {    
+    max-width: 1136px; 
+    width: 100%; 
+    margin: auto; 
+}
+
 /* CABEÇALHO */
-.menu{
+.menu{    
     display: flex;
     padding: 32px 0 32px 0;
     align-items: center;
-    justify-content: space-between;       
-            
+    justify-content: space-between; 
+    height: 100%;  
+    margin-bottom: var(--tamanho-de-margem);    
+      
 }
 
 .menu__title{
@@ -45,22 +59,16 @@ body {
 }
 
 .menu__navegacao ul {
-    list-style-type: none;
     margin-right: auto;
     display: flex;
 }
 
 .menu__navegacao li {
-    align-self: center; 
+     display: inline-block;
+     margin-left: 32px;
 }
 
-.menu__list li:nth-child(1),
-.menu__list li:nth-child(2),
-.menu__list li:nth-child(3),
-.menu__list li:nth-child(4),
-.menu__list li:nth-child(5){
-    margin-right: 32px;
-}
+
 
 .menu__navegacao a {
     text-decoration: none;
@@ -73,13 +81,76 @@ body {
     color: #afafaf; 
 }
 
-ol, ul,li {
-    list-style: none;
+/* Estilos para a seção do título */
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    
 }
-a{
+
+.title__div {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-bottom: var(--tamanho-de-margem);
+    
+}
+
+.title__profile { 
+    margin-bottom: 24px;
+    
+}
+
+.title__bio {
+    font-size: 52px;
+    font-weight: bold;
+    font-family: 'Roboto';
+    margin-left: auto;
+    color: var(--cor-secundaria);
+    margin-bottom: 24px;
+    
+}
+
+.title__subsection {
+    font-size: 22px; /* Tamanho do texto da subseção */
+    color: var(--cor-secundaria); 
+    margin-bottom: 24px;
+}
+
+.title__network {
+    display: flex;    
+    padding: 0;
+}
+
+.title__network__item {
+    margin-right: 32px;
+}
+
+.title__network__item a {
     text-decoration: none;
-    color: var(--cor-de-link);
+    color: var(--cor-secundaria); 
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
 }
+
+.title__network__item a:hover{
+    color: #afafaf; 
+}
+
+.title__network__item img {
+    margin-left: 5px; /* Espaçamento entre o texto e o ícone */
+}
+
+.title__image img {
+    width: 368px;
+}
+
+
+
 
 
 /*Neste desafio, gostariamos que praticassem a metodologia BEM, caso seintam a vontade 
