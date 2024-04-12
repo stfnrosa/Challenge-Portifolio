@@ -6,7 +6,10 @@
     --cor-de-link: #000;
     --cor-secundaria:  #464646;
     --font: 'Montserrat', sans-serif;
-    --tamanho-de-margem: 32px;
+    --tamanho-de-margem-container: 32px;
+    --tamanho-de-margem-interna: 16px;
+    --tamanho-font-principal: 32px;
+    --tamanho-font-secundaria: 16px;
 }
 
 *{
@@ -33,11 +36,11 @@ body {
 /* CABEÇALHO */
 .menu{    
     display: flex;
-    padding: 32px 0 32px 0;
+    padding: 32px 0;
     align-items: center;
     justify-content: space-between; 
     height: 100%;  
-    margin-bottom: var(--tamanho-de-margem);    
+    margin-bottom: var(--tamanho-de-margem-container);    
       
 }
 
@@ -73,7 +76,7 @@ body {
 .menu__navegacao a {
     text-decoration: none;
     color: var(--cor-de-link); 
-    font-size: 16px; 
+    font-size: var(--tamanho-font-secundaria); 
     font-weight: 500;
     transition: color 0.3s; 
 }
@@ -84,29 +87,32 @@ body {
 /* Estilos para a seção do título */
 .title {
     display: flex;
-    justify-content: space-between;
     align-items: center;
 
     
 }
 
 .title__div {
+    justify-content: space-between;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    margin-bottom: var(--tamanho-de-margem);
+    margin-bottom: var(--tamanho-de-margem-container);
     
 }
 
-.title__profile { 
-    margin-bottom: 24px;
+
+.title__profile{
     
+}
+
+.title__container{
+    width: 66.1%;
 }
 
 .title__bio {
     font-size: 52px;
     font-weight: bold;
-    font-family: 'Roboto';
     margin-left: auto;
     color: var(--cor-secundaria);
     margin-bottom: 24px;
@@ -131,7 +137,7 @@ body {
 .title__network__item a {
     text-decoration: none;
     color: var(--cor-secundaria); 
-    font-size: 16px;
+    font-size: var(--tamanho-font-secundaria);
     display: flex;
     align-items: center;
     transition: color 0.3s;
@@ -149,8 +155,100 @@ body {
     width: 368px;
 }
 
+/* SOBRE MIM */
+.about{
+    padding: 64px 0;
+    width: 66.1%;
+    margin-bottom: var(--tamanho-de-margem-container)
+}
 
 
+.about__title{
+    font-size: var(--tamanho-font-principal);
+    font-weight: 600;
+    margin-bottom: var(--tamanho-de-margem-interna);
+    
+}
+
+.about__paragraph{
+    font-size:var(--tamanho-font-secundaria);
+}
+
+.skills,
+.hobbies{
+    margin-bottom: 88px;
+   
+}
+
+
+.skills__title,
+.hobbies__title,
+.academic__title{
+    font-size: var(--tamanho-font-principal);
+    text-align: center;
+    margin-bottom: var(--tamanho-font-principal);
+}
+
+.skills__line,
+.hobbies__line{
+    height: 174px;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.skills__name,
+.hobbies__name{
+    font-size: var(--tamanho-font-secundaria);
+    font-weight: 600;  
+    
+}
+
+.skills__box,
+.hobbies__box{
+    height: 100%;
+    width: 176px;
+    padding: 16px;
+    background-color: aqua;
+}
+
+
+.skills__box ul,
+.hobbies__box ul{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+section.academic{
+    padding: 82px 0;
+} 
+
+.academic__courses{
+    display: flex;
+    justify-content: space-around;
+    height: 347px;
+    align-items: flex-end;
+}
+
+.academic__courses__box{
+
+}
+
+.academic__courses__list{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.academic__courses__item__title{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.academic__courses__item__subtitle{
+    font-size: var(--tamanho-font-secundaria);
+}
 
 
 /*Neste desafio, gostariamos que praticassem a metodologia BEM, caso seintam a vontade 
@@ -164,6 +262,7 @@ Isso torna o desenvolvimento de interface fácil e rápido, mesmo com uma interf
 de usuário complexa, e permite a reutilização de código existente sem copiar e colar.
 
 Link da documentação oficial!
+
 https://en.bem.info/methodology/quick-start/*/
 
 /*Sessão Menu*/
@@ -187,14 +286,10 @@ section.about{
 /*Sessão Hobbies*/
 
 section.hobbies{
-    
 }
 
 /* Experiência Acadêmica*/
 
-section.academic{
-
-}
 
 /* experiência*/
 
