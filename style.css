@@ -343,7 +343,8 @@ section.academic{
 }
 
 .formcontato{
-    padding: 64px 0;
+    padding: 64px;
+    background-color: var(--cor-azul-claro);
 }
 
 .formcontato__contacto{
@@ -387,6 +388,7 @@ section.academic{
 
 .formcontato__textarea{
     resize: none;
+    
 
 }
 
@@ -398,12 +400,26 @@ section.academic{
 
 .formcontato__botao{
     padding: 16px;
+    font-size: var(--tamanho-font-secundaria);
+    background-color: var(--cor-azul-escuro);
+    border: 1px solid var(--cor-azul-escuro);
+    color: #ffffff;   
     
+}
+
+.footer{
+    padding: 32px;
+
 }
 
 .footer__rodape{
     font-size: var(--tamanho-font-secundaria);
+    text-align: center;
 }
+
+
+
+
 /*Neste desafio, gostariamos que praticassem a metodologia BEM, caso seintam a vontade 
 de utiliza-la. 
 
