@@ -3,6 +3,7 @@
 :root{
     --cor--branco: #ffffff;
     --cor-azul-claro: #EAF2FD;
+    --cor-azul-escuro: #2a7ae4;
     --cor-de-fundo: #F5F5F5;
     --cor-de-link: #000;
     --cor-secundaria:  #464646;
@@ -20,6 +21,7 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style-type: none;
+    border:none;
 }
 
 body { 
@@ -98,6 +100,7 @@ body {
     justify-content: space-between;
     display: flex;
     flex-direction: row-reverse;
+    gap: 16px;
     align-items: center;
     margin-bottom: var(--tamanho-de-margem-container);
     
@@ -109,7 +112,10 @@ body {
 }
 
 .title__container{
+    display: flex;
+    flex-direction: column;
     width: 66.1%;
+    gap: 24px;
 }
 
 .title__bio {
@@ -117,7 +123,6 @@ body {
     font-weight: bold;
     margin-left: auto;
     color: var(--cor-secundaria);
-    margin-bottom: 24px;
     
 }
 
@@ -125,17 +130,13 @@ body {
     font-size: 22px; 
     font-weight: 500;
     color: var(--cor-secundaria); 
-    margin-bottom: 24px;
 }
 
 .title__network {
     display: flex;    
-    padding: 0;
+    gap: 32px;
 }
 
-.title__network__item {
-    margin-right: 32px;
-}
 
 .title__network__item a {
     text-decoration: none;
@@ -199,7 +200,8 @@ body {
 .hobbies__line{
     height: 174px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 16px;
     
 }
 
@@ -237,8 +239,8 @@ section.academic{
 
 .academic__courses{
     display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
+    justify-content: center;
+    gap:16px;
 }
 
 .academic__courses__box{
@@ -265,7 +267,7 @@ section.academic{
 }
 
 .academic__courses__item__title{
-    font-size: 22px;
+    font-size: 20px;
     font-weight: var(--tamanho-font-negrito);
 }
 
@@ -273,21 +275,40 @@ section.academic{
     font-size: var(--tamanho-font-secundaria);
 }
 
+.experiencie__box__reverso:not(:last-child) {
+    margin-bottom: 64px; 
+}
+
+.experiencie__box__reverso:last-child {
+    margin-bottom: 32px; 
+}
+
+
 .experiencie__box{
     display: flex;
+    margin-bottom: 64px;
+    gap: 16px;
+    
+}
+
+.experiencie__box__reverso{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 16px;   
 }
 
 .experience__img{
     width: 751px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     
 }
 
 .experience__info{
-    margin: 16px;
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     gap: 8px;
-    align-self: center;
+    margin: auto;
 }
 
 .experience__title{
@@ -300,7 +321,89 @@ section.academic{
     font-weight: 500;
 }
 
+.experience__description{
+    display: flex;
+    flex-direction: row;
+    gap:16px;
+}
 
+.experiencia__botao--repo{
+    padding: 16px;
+    font-size: var(--tamanho-font-secundaria);
+    border: 1px solid var(--cor-azul-escuro);
+    color: var(--cor-azul-escuro);
+}
+
+.experiencia__botao--demo{
+    padding: 16px;
+    font-size: var(--tamanho-font-secundaria);
+    background-color: var(--cor-azul-escuro);
+    border: 1px solid var(--cor-azul-escuro);
+    color: #ffffff;
+}
+
+.formcontato{
+    padding: 64px 0;
+}
+
+.formcontato__contacto{
+    display: flex;
+    gap: 16px;
+}
+
+.formcontato__title{
+    font-size: var(--tamanho-font-principal);
+    font-weight: var(--tamanho-font-negrito);
+    color: #464646;
+    margin-bottom: 8px;
+}
+
+.formcontato__subtext{
+    font-size: var(--tamanho-font-secundaria);
+    font-weight: 500;
+    color: #464646;
+}
+
+.formcontato__form{
+    padding: 32px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.formcontato__input{ 
+   height: 56px;
+   padding: 8px;
+   border:none;
+   border-radius: 4px;
+   
+}
+
+.formcontato__input:focus{
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+
+.formcontato__textarea{
+    resize: none;
+
+}
+
+.formcontato__textarea:focus{
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+
+.formcontato__botao{
+    padding: 16px;
+    
+}
+
+.footer__rodape{
+    font-size: var(--tamanho-font-secundaria);
+}
 /*Neste desafio, gostariamos que praticassem a metodologia BEM, caso seintam a vontade 
 de utiliza-la. 
 
