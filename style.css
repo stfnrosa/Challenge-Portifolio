@@ -37,7 +37,8 @@ body {
     margin: auto; 
 }
 
-/* CABEÇALHO */
+/* cabeçalho */
+
 .menu{    
     display: flex;
     padding: 32px 0;
@@ -88,7 +89,8 @@ body {
     color: #afafaf; 
 }
 
-/* Estilos para a seção do título */
+/* título */
+
 .title {
     display: flex;
     align-items: center;
@@ -108,7 +110,7 @@ body {
 
 
 .title__profile{
-    
+   width: 368px; 
 }
 
 .title__container{
@@ -159,7 +161,8 @@ body {
     width: 368px;
 }
 
-/* SOBRE MIM */
+/* sobre mim*/
+
 .about{
     background-color: var(--cor-azul-claro);
     padding: 64px 0;
@@ -179,6 +182,8 @@ body {
     width: 751px;
     font-size:var(--tamanho-font-secundaria);
 }
+
+/* .skills e hobbies */
 
 .skills,
 .hobbies{
@@ -231,6 +236,8 @@ body {
     gap: 8px;
 }
 
+/* formção acadêmica */
+
 section.academic{
     padding: 82px 0;
     background-color: var(--cor-azul-claro);
@@ -274,6 +281,8 @@ section.academic{
 .academic__courses__item__subtitle{
     font-size: var(--tamanho-font-secundaria);
 }
+
+/* experiência */
 
 .experiencie__box__reverso:not(:last-child) {
     margin-bottom: 64px; 
@@ -342,6 +351,8 @@ section.academic{
     color: #ffffff;
 }
 
+/* contato */
+
 .formcontato{
     padding: 64px;
     background-color: var(--cor-azul-claro);
@@ -372,40 +383,73 @@ section.academic{
     gap: 32px;
 }
 
+
+.formcontato__input,
+.formcontato__textarea {
+  line-height: 20px;
+}
+
 .formcontato__input{ 
-   height: 56px;
-   padding: 8px;
-   border:none;
-   border-radius: 4px;
-   
+    width: 100%;
+    height: 56px;
+    border: none;
+    border-bottom: 1px solid #00000050;
+    border-radius: 4px;
+    height: 3.5rem;
+    padding: 8px 12px;
+    
 }
 
 .formcontato__input:focus{
-    box-shadow: 0 0 0 0;
-    border: 0 none;
-    outline: 0;
+    border-bottom: 1px solid var(--cor-azul-escuro); 
+    outline: none; 
 }
 
-.formcontato__textarea{
-    resize: none;
-    
+.formcontato__input:focus::placeholder {
+    color: var(--cor-azul-escuro);
+}
 
+.formcontato__input::placeholder {
+    color: #999;
+    font-size: 12px;
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    transform: translateY(-50%);
+    transition: color 0.2s ease-in-out;
+    }
+
+.formcontato__textarea{
+    border: none;
+    width: 100%;
+    padding: 1rem 0 0 0.75rem;
+    border-bottom: 1px solid #00000050;
+    border-radius: 4px;
+    resize: none;  
+    
 }
 
 .formcontato__textarea:focus{
-    box-shadow: 0 0 0 0;
-    border: 0 none;
-    outline: 0;
+    border-bottom: 1px solid var(--cor-azul-escuro); 
+    outline: none; 
 }
 
+
 .formcontato__botao{
+    margin: auto;
     padding: 16px;
     font-size: var(--tamanho-font-secundaria);
     background-color: var(--cor-azul-escuro);
     border: 1px solid var(--cor-azul-escuro);
+    border-radius: 4px;
     color: #ffffff;   
-    
 }
+
+.formcontato__botao:hover {
+    cursor: pointer;
+}
+
+/* footer */
 
 .footer{
     padding: 32px;
