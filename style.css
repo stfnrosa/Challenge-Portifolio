@@ -7,6 +7,7 @@
     --cor-de-fundo: #F5F5F5;
     --cor-de-link: #000;
     --cor-secundaria:  #464646;
+    --cor-font: #f5f5f5;
     --font: 'Montserrat', sans-serif;
     --tamanho-de-margem-container: 32px;
     --tamanho-de-margem-interna: 16px;
@@ -25,7 +26,7 @@
 }
 
 body { 
-    background-color: var(--cor-de-fundo);
+    background-color: #000000;
     font-family: 'Raleway';
     line-height: 1;
 }
@@ -39,19 +40,26 @@ body {
 
 /* cabeçalho */
 
-.menu{    
-    display: flex;
+.menu{  
+    background: rgb(42,0,84);
+    background: linear-gradient(133deg, rgba(42,0,84,1) 0%, rgba(86,1,82,1) 100%);  
     padding: 32px 0;
-    align-items: center;
-    justify-content: space-between; 
     height: 100%;  
     margin-bottom: var(--tamanho-de-margem-container);    
-      
+    
+}
+
+.menu__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    
 }
 
 .menu__title{
     display: flex;
     align-items: center;
+    color: var(--cor-font);
 }
 
 .menu__title img {
@@ -80,7 +88,7 @@ body {
 
 .menu__navegacao a {
     text-decoration: none;
-    color: var(--cor-de-link); 
+    color: var(--cor-font); 
     font-size: var(--tamanho-font-secundaria); 
     font-weight: 500;
     transition: color 0.3s; 
@@ -188,6 +196,7 @@ body {
 .skills,
 .hobbies{
     margin-bottom: 88px;
+    
    
 }
 
@@ -199,6 +208,7 @@ body {
     font-size: var(--tamanho-font-principal);
     text-align: center;
     margin-bottom: var(--tamanho-de-margem-container);
+    color: var(--cor-font);
 }
 
 .skills__line,
@@ -222,7 +232,8 @@ body {
     height: 100%;
     width: 176px;
     padding: 16px;
-    background-color: var(--cor--branco);
+    background: rgb(42,0,84);
+    background: linear-gradient(133deg, rgba(42,0,84,1) 0%, rgba(86,1,82,1) 100%);
     display: flex; 
     flex-direction: column; 
     justify-content: flex-end;
