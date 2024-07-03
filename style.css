@@ -227,6 +227,7 @@ body {
     font-size: var(--tamanho-font-secundaria);
     font-weight: var(--tamanho-font-negrito); 
     text-decoration: none; 
+    color:  var(--cor-principal);
     
 }
 
