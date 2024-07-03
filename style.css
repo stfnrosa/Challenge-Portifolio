@@ -217,10 +217,16 @@ body {
 }
 
 .skills__name,
-.hobbies__name,
-.contato__name{
+.hobbies__name{
     font-size: var(--tamanho-font-secundaria);
     font-weight: var(--tamanho-font-negrito);  
+    
+}
+
+.contato__name{
+    font-size: var(--tamanho-font-secundaria);
+    font-weight: var(--tamanho-font-negrito); 
+    text-decoration: none; 
     
 }
 
